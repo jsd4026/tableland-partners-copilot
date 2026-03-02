@@ -195,7 +195,7 @@ Yes. MIT License. Fork it, customize it, make it yours.
 | **AI Essentials Roundtable** (live support + community) | [tablelandpartners.com/ai_essentials_roundtable](https://tablelandpartners.com/ai_essentials_roundtable/) |
 | **Email Jeffrey Daniels** | jeff@tablelandpartners.com |
 | **Tableland Partners** | [tablelandpartners.com](https://tablelandpartners.com) |
-| **LinkedIn** | [linkedin.com/company/tableland-partners](https://www.linkedin.com/company/tableland-partners) |
+| **LinkedIn** | [linkedin.com/in/jsdaniels]([https://www.linkedin.com/in/jsdaniels/) |
 
 ---
 
