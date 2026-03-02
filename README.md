@@ -2,7 +2,7 @@
 
 **Your free AI-powered business team. Built on Claude. Works in 15 minutes.**
 
-[![Watch the Demo](https://img.shields.io/badge/▶_Watch_Demo-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/company/tableland-partners)
+[![Watch the Demo](https://img.shields.io/badge/▶_Watch_Demo-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jsdaniels/recent-activity/all/)
 [![Get Support](https://img.shields.io/badge/Get_Support-AI_Essentials_Roundtable-1B1E3D?style=for-the-badge)](https://tablelandpartners.com/ai_essentials_roundtable/)
 
 ---
