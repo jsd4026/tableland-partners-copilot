@@ -96,7 +96,7 @@ These instructions tell the AI how to guide you through the complete setup proce
 
 ### Step 5: Upload the Implementation Guide
 
-1. Download [`Complete_Implementation_Guide_v4.docx`](docs/Complete_Implementation_Guide_v4.docx) from this repo
+1. Download [`Guide.md`](docs/Guide.md) from this repo (click the file, then click the download button)
 2. In your Claude Project, find **Knowledge** or **Files**
 3. Click **Add files** or **Upload**
 4. Select the guide you just downloaded
@@ -173,8 +173,7 @@ tableland-partners-copilot/
 ├── README.md
 ├── LICENSE
 └── docs/
-    ├── Guide.md                               ← Implementation Guide (auto-fetched)
-    ├── Complete_Implementation_Guide_v4.docx   ← Fallback for upload
+    ├── Guide.md                               ← Implementation Guide (auto-fetched + fallback upload)
     ├── setup-mode-instructions.md              ← Setup Mode instructions
     ├── Operational-Mode-Instructions.md        ← Operational Mode instructions
     └── conversation-0-prompt.md                ← First conversation prompt
