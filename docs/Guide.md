@@ -1,9 +1,9 @@
-<!-- TABLELAND COPILOT GUIDE - DO NOT REMOVE THIS HEADER -->
-<!-- VERSION: 5.0 -->
-<!-- LAST UPDATED: 2026-03-06 -->
-<!-- This file is the single source of truth for the Tableland Copilot system. -->
-<!-- Claude will fetch this file at the start of each new conversation. -->
-<!-- To update: Edit this file on GitHub, commit changes, and all members' copilots auto-update. -->
+---
+TABLELAND COPILOT GUIDE
+VERSION: 5.0
+LAST UPDATED: 2026-03-06
+This file is the single source of truth for the Tableland Copilot system.
+---
 
 # TABLELAND COPILOT - COMPLETE IMPLEMENTATION GUIDE
 
