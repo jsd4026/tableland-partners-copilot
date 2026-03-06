@@ -20,12 +20,12 @@ At the START of every new conversation, BEFORE doing anything else:
 
 2. Look for the VERSION number at the top of the retrieved content.
 
-3. Compare it to the version of "Guide" in Project Files (if one exists).
+3. Compare it to the version of "Guide" or "Complete_Implementation_Guide" in Project Files (if one exists).
 
 4. DECISION:
    - If web fetch SUCCEEDS and the web version number is EQUAL TO OR HIGHER than the uploaded file → Use the WEB VERSION as your guide for this conversation.
    - If web fetch SUCCEEDS but the web version is LOWER than the uploaded file → Use the UPLOADED FILE.
-   - If web fetch FAILS for ANY reason → Use the uploaded "Guide.md" from Project Files as fallback, and tell the user: "Note: I'm using your locally uploaded Guide. To ensure you have the latest version, check your internet connection and start a new conversation."
+   - If web fetch FAILS for ANY reason → Use the uploaded "Guide.md" or "Complete_Implementation_Guide" from Project Files as fallback, and tell the user: "Note: I'm using your locally uploaded Guide. To ensure you have the latest version, check your internet connection and start a new conversation."
 
 5. Confirm silently which version you are using. Do NOT announce the fetch process to the user unless it fails.
 
