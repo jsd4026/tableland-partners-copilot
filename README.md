@@ -50,6 +50,9 @@ After a 15-minute setup and 2–4 weeks of guided building, you'll have:
 
 **Plus custom agents** — the system is designed so you can easily add new conversations for specific client projects, competitive intelligence, or anything your business needs.
 
+### 🔄 Auto-Updating System
+Your Copilot automatically retrieves the latest version of the Implementation Guide from this repo at the start of every new conversation. When we release improvements, your Copilot gets smarter — no action needed on your part.
+
 ### 🛡️ Built-In Support
 Every conversation includes an **"I need Jeff's help"** feature. Say it anytime and the AI will draft an email to Jeffrey Daniels with your conversation context, so you get real human support when you need it.
 
@@ -89,7 +92,7 @@ Tableland Copilot is your AI-powered business assistant that guides you step-by-
 
 Copy the **entire contents** of [`setup-mode-instructions.md`](docs/setup-mode-instructions.md) and paste it into the **Custom Instructions** (or **Instructions**) field in your project settings.
 
-These instructions tell the AI how to guide you through the complete setup process.
+These instructions tell the AI how to guide you through the complete setup process, including automatically fetching the latest Implementation Guide.
 
 ### Step 5: Upload the Implementation Guide
 
@@ -98,7 +101,7 @@ These instructions tell the AI how to guide you through the complete setup proce
 3. Click **Add files** or **Upload**
 4. Select the guide you just downloaded
 
-> This is the "brain" — it contains every prompt, every phase, every checkpoint, and every document template the AI needs to build your business foundation.
+> This serves as a backup. Your Copilot will automatically fetch the latest version of the Guide from this repo at the start of each conversation. The uploaded file is only used if the fetch fails.
 
 ### Step 6: Enable Conversation Search
 
@@ -152,7 +155,7 @@ After completing all phases, you switch from **Setup Mode** to **Operational Mod
 
 ## What Happens After Setup
 
-Once you complete the guided setup (2–4 weeks), you update the project instructions to **Operational Mode**. The AI switches from "build your business" to "run your business" — and your 6 agents are ready for daily use.
+Once you complete the guided setup (2–4 weeks), you update the project instructions to **Operational Mode**. Copy the contents of [`Operational-Mode-Instructions.md`](docs/Operational-Mode-Instructions.md) and replace your Setup Mode instructions. The AI switches from "build your business" to "run your business" — and your 6 agents are ready for daily use.
 
 **Your daily workflow might look like:**
 - **Monday:** Open Prospecting Agent → generate 5 qualified leads with pitches
@@ -160,6 +163,22 @@ Once you complete the guided setup (2–4 weeks), you update the project instruc
 - **Wednesday:** Open Proposals Agent → draft 2 proposals from voice notes
 - **Thursday:** Open Field Support → your team gets instant technical answers
 - **Friday:** Open Finance Agent → snap and process the week's receipts
+
+---
+
+## Repo Structure
+
+```
+tableland-partners-copilot/
+├── README.md
+├── LICENSE
+└── docs/
+    ├── Guide.md                               ← Implementation Guide (auto-fetched)
+    ├── Complete_Implementation_Guide_v4.docx   ← Fallback for upload
+    ├── setup-mode-instructions.md              ← Setup Mode instructions
+    ├── Operational-Mode-Instructions.md        ← Operational Mode instructions
+    └── conversation-0-prompt.md                ← First conversation prompt
+```
 
 ---
 
@@ -183,6 +202,12 @@ Say **"I need Jeff's help"** in any conversation. The AI will generate a share l
 **Can I customize the agents?**
 Absolutely. The system is built so you can add new conversations for any purpose — client-specific projects, competitive intelligence, hiring, you name it. The Implementation Guide shows you how.
 
+**Does the Copilot update automatically?**
+Yes. The Instructions include a Guide Retrieval Protocol that fetches the latest version of the Implementation Guide from this repo at the start of every conversation. When we publish improvements, your Copilot gets them automatically.
+
+**Claude down? Switch to Grok.**
+Say "Switch to Grok" in any conversation and the Copilot will provide instructions for setting up on Grok. You can also email jeff@tablelandpartners.com for help.
+
 **Can I fork this and modify it?**
 Yes. MIT License. Fork it, customize it, make it yours.
 
@@ -195,7 +220,7 @@ Yes. MIT License. Fork it, customize it, make it yours.
 | **AI Essentials Roundtable** (live support + community) | [tablelandpartners.com/ai_essentials_roundtable](https://tablelandpartners.com/ai_essentials_roundtable/) |
 | **Email Jeffrey Daniels** | jeff@tablelandpartners.com |
 | **Tableland Partners** | [tablelandpartners.com](https://tablelandpartners.com) |
-| **LinkedIn** | [linkedin.com/in/jsdaniels]([https://www.linkedin.com/in/jsdaniels/) |
+| **LinkedIn** | [linkedin.com/in/jsdaniels](https://www.linkedin.com/in/jsdaniels/) |
 
 ---
 
