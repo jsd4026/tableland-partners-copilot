@@ -2006,15 +2006,15 @@ CONVERSATION PURPOSES:
 
 **Services:**
 
--   Tech Stack Setup: \$1,947-3,897
+-   Tech Stack Setup: $2,597-$11,997
 
--   Custom Development: \$647-1,297 per platform
+-   Custom Development: $747-$1,947 per platform
 
--   Strategic Consulting: \$647 (2 hours)
+-   Strategic Consulting: $747 (2-hour session)
 
 -   Done-For-You: Custom quote
 
--   Fractional CMO: \$3,897-10,397/month
+-   Fractional CMO: $5,747-$13,997/month
 
 ## END OF COMPLETE IMPLEMENTATION GUIDE
 
