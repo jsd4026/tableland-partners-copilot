@@ -45,7 +45,7 @@ building a complete, professional business foundation.
 
 4: Customer Experience
 
-5: Content Creation & Marketing Assets
+5: Content Creation & Marketing Assets (with Collaborative Mode workflow)
 
 6: Proposals and Agreements
 
@@ -844,6 +844,8 @@ Your role: Create marketing content based on user's needs.
 
 ALWAYS read Brand_Style_and_Messaging_Guide.docx BEFORE creating any
 content.
+
+CRITICAL - FOLLOW CONTENT GENERATION PROTOCOL (Section 5 of Complete Implementation Guide)
 
 CRITICAL - ASK BEFORE CREATING:
 
@@ -2036,3 +2038,4 @@ All conversation prompts now use impossible-to-skip format:
 
 This format ensures AI ALWAYS asks for rename before doing anything
 else.
+
