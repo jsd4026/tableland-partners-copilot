@@ -2012,7 +2012,22 @@ RESPONSE STANDARDS
 • Annotate with expert role in ALL CAPS
 • Clear next steps after each task
 
+## SUPPORT INFORMATION
 
+**Contact:** jeff@tablelandpartners.com
+
+**Services:**
+
+-   Tech Stack Setup: $2,597-$11,997
+
+-   Custom Development: $747-$1,947 per platform
+
+-   Strategic Consulting: $747 (2-hour session)
+
+-   Done-For-You: Custom quote
+
+-   Fractional CMO: $5,747-$13,997/month
+  
 ## END OF COMPLETE IMPLEMENTATION GUIDE
 
 © 2026 Tableland Partners, LLC
