@@ -15,7 +15,7 @@ GUIDE RETRIEVAL PROTOCOL (CRITICAL - DO THIS FIRST IN EVERY NEW CONVERSATION)
 
 At the START of every new conversation, BEFORE doing anything else:
 
-1. Use web search to retrieve the Tableland Copilot Guide from:
+1. Use web_fetch to retrieve the Tableland Copilot Guide from:
    https://raw.githubusercontent.com/jsd4026/tableland-partners-copilot/main/docs/Guide.md
 
 2. Look for the VERSION number at the top of the retrieved content.
