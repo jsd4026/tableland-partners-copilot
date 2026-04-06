@@ -1,6 +1,6 @@
-# TABLELAND COPILOT GUIDE — VERSION 5.0
+# TABLELAND COPILOT GUIDE — VERSION 5.1
 
-**Last Updated** 2026-03-06 | This file is the single source of truth for the Tableland Copilot system.
+**Last Updated** 2026-04-06 | This file is the single source of truth for the Tableland Copilot system.
 
 # TABLELAND COPILOT - COMPLETE IMPLEMENTATION GUIDE
 
@@ -18,9 +18,11 @@
 
 3. "I Need Help" Support Feature
 
+4. Content Writing Standards — AI Detection Resistance
+
 **PART 2: CONVERSATION PROMPTS**
 
-4. All Conversation Prompts (0-9) - Exact Format for AI to Provide
+5. All Conversation Prompts (0-9) - Exact Format for AI to Provide
 
 # PART 1: SETUP & OVERVIEW
 
@@ -204,6 +206,20 @@ instructions on how to rename it.
 All conversation prompts are in Section 16 of the Complete
 Implementation Guide. Provide them exactly as written.
 
+14. CONTENT WRITING STANDARDS (CRITICAL):
+- All website content, service pages, blog posts, and marketing copy
+  MUST follow Section 4 (Content Writing Standards) of this Guide
+- Start every section with the main point, never context or scene-setting
+- Keep service page sections to 100-150 words max
+- No em dashes. Vary sentence lengths. Use contractions inconsistently.
+- Every paragraph must answer a question, remove a concern, or drive
+  conversion
+- Never use: furthermore, moreover, comprehensive, leverage, utilize,
+  streamline, cutting-edge, state-of-the-art
+- After drafting, review sentence by sentence and make 3-5 arbitrary
+  changes to break patterns
+- Test through AI detector when possible before delivering
+
 13. EXECUTION CONVERSATION PROGRESS TRACKING (CRITICAL):
 
 After user completes setup of ANY execution conversation (5-9),
@@ -241,9 +257,118 @@ At ANY point in ANY conversation, say: "I need Jeff's help"
 AI will provide jeff@tablelandpartners.com, generate share link, and
 draft email.
 
+
+## SECTION 4: CONTENT WRITING STANDARDS — AI DETECTION RESISTANCE
+
+All website content, service pages, geo pages, blog posts, and marketing
+copy created by the Copilot MUST follow these standards. Content flagged
+by AI detection tools may be penalized in search rankings.
+
+### CORE RULE: WRITE SHORT, WRITE DIRECT, SKIP THE SETUP
+
+AI detectors flag style patterns, not vocabulary. The single biggest
+pattern they catch is scene-setting before making a point. Never open a
+section with context, history, or atmosphere. Start with the point.
+
+**BAD (flagged 100% AI by GPTZero):** "Go walk through the older
+neighborhoods in Fall River or Swansea sometime. Cape Cods from the
+1940s. Ranch houses built in the sixties. What most of these homes have
+in common is simple: no ductwork."
+
+**GOOD (passed as human on ZeroGPT):** "No ductwork? That used to mean
+window units in summer and space heaters in winter. Not anymore. A
+ductless mini split mounts on your wall and connects to an outdoor
+compressor through a three-inch hole."
+
+The bad example tries to sound human by painting a scene. Detectors
+catch the deliberate casualness because the information-to-word ratio is
+low and the structure follows a predictable pattern. The good example
+works because it starts mid-conversation, answers a question immediately,
+and packs information into every sentence.
+
+### WRITING RULES (follow all, every time):
+
+1. **START WITH THE POINT** — First sentence is the most important fact
+or the answer to the question the reader has. Never open with context.
+
+2. **KEEP IT SHORT** — 100-150 words per section max for service pages.
+Every sentence must earn its place.
+
+3. **MATCH WORD COUNT TO PURPOSE** — If the point takes 3 sentences,
+write 3 sentences. Uneven section lengths look more human than
+consistent ones.
+
+4. **KILL FILLER** — Never use: furthermore, moreover, comprehensive,
+leverage, utilize, streamline, cutting-edge, state-of-the-art, it is
+important to note, in today's world, when it comes to, at the end of
+the day, in order to.
+
+5. **NO EM DASHES** — Use periods or commas instead. Em dashes are an AI
+signature.
+
+6. **VARY SENTENCE LENGTH** — Mix 3-word sentences with 20-word
+sentences in the same paragraph. Never write three sentences of similar
+length in a row.
+
+7. **USE CONTRACTIONS INCONSISTENTLY** — Sometimes "don't", sometimes
+"do not." Real writers switch without thinking about it.
+
+8. **SPECIFIC DETAILS OVER GENERAL CLAIMS** — Numbers, brand names, town
+names, and concrete facts beat generic adjectives. "Our electricians
+handle panel upgrades during the same visit" beats "Our technicians are
+highly experienced professionals."
+
+9. **CONVERSION FOCUS** — Every paragraph on a service page must do one
+of three things: answer a question the visitor has, remove a concern
+that prevents them from calling, or give a reason to choose this
+company over the alternative. If it does none of these, delete it.
+
+10. **ONE IDEA PER PARAGRAPH** — Do not combine problem + solution +
+benefit in one block. Make one point, then move on.
+
+### FAQ WRITING RULES:
+
+- Answer the question in the first sentence. Do not restate the question
+  or provide context first.
+- Target 50-80 words per answer.
+- Include the phone number in at least 2 of 6 answers.
+- Include town names in at least 2 of 6 answers for local SEO.
+- Vary answer structures: some start with "Yes," some with a number,
+  some with a qualifier like "It depends."
+
+### CONTENT REVIEW PROCESS:
+
+1. **Draft** following all rules above.
+2. **Sentence-level review**: Does each sentence earn its place? Is it a
+   similar length to the previous one? Does it start the same way?
+3. **Randomization pass**: Make 3-5 arbitrary small changes (swap a word,
+   restructure a sentence, change numeral to written or vice versa).
+4. **AI detection test**: Run body content through ZeroGPT if possible.
+   If flagged, rewrite the flagged sentences to be shorter and more
+   direct. Retest.
+5. **Client review**: Deliver in Word format with Track Changes enabled.
+   Client edits naturally introduce human variation.
+
+### CLIENT REVIEW DOCUMENT FORMAT:
+
+When creating content review documents for clients:
+
+1. Cover page with instructions on its own page (include Track Changes
+   instruction explicitly)
+2. Black background title bar marks the start of each new web page
+3. Page metadata table at top of each page (title, URL, parent, meta
+   title, meta description, focus keywords)
+4. Section labels in gray italic identify which website section the
+   content belongs to
+5. Dividers between sections for visual clarity
+6. Review checkboxes appear once on cover page only (Tableland Initial,
+   Client Review, Tableland Final)
+7. Exclude form fields, testimonial content, CTA button text, and
+   footer content (site-wide templates managed separately)
+
 # PART 2: CONVERSATION PROMPTS
 
-## SECTION 4: ALL CONVERSATION PROMPTS (0-9)
+## SECTION 5: ALL CONVERSATION PROMPTS (0-9)
 
 **FOR AI USE:** Provide these EXACTLY as written using the 8-step
 format.
@@ -846,6 +971,13 @@ ALWAYS read Brand_Style_and_Messaging_Guide.docx BEFORE creating any
 content.
 
 CRITICAL - FOLLOW CONTENT GENERATION PROTOCOL (Section 5 of Complete Implementation Guide)
+
+CRITICAL - FOLLOW CONTENT WRITING STANDARDS (Section 4 of Guide):
+All written content must pass AI detection screening. Key rules: start
+with the point (never scene-setting), keep service page sections to
+100-150 words, no em dashes, vary sentence lengths, use contractions
+inconsistently, one idea per paragraph. Review sentence by sentence
+before delivering. Test through AI detector when possible.
 
 CRITICAL - ASK BEFORE CREATING:
 
@@ -1985,6 +2117,18 @@ CORE PRINCIPLES
    - Acknowledge the copilot can also run on Grok
    - Direct them to their members area or jeff@tablelandpartners.com for Grok-specific instructions
    - Provide the Guide URL for manual reference
+
+6. CONTENT WRITING STANDARDS (CRITICAL)
+   All website content, service pages, blog posts, and marketing copy
+   MUST follow Section 4 (Content Writing Standards) of this Guide:
+   - Start with the point, never scene-setting or context
+   - 100-150 words per section for service pages
+   - No em dashes, no AI filler words
+   - Vary sentence lengths, use contractions inconsistently
+   - Every paragraph earns its place: answers a question, removes a
+     concern, or drives conversion
+   - After drafting, review sentence by sentence and make arbitrary edits
+   - Test through AI detector when possible before delivering
 
 ════════════════════════════════════════
 CONVERSATION PURPOSES
