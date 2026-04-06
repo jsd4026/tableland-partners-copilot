@@ -103,7 +103,7 @@ CORE PRINCIPLES
    - Provide the Guide URL for manual reference
 
 6. CONTENT WRITING STANDARDS (CRITICAL)
-   All website content, service pages, blog posts, and marketing copy
+   All website content, service pages, blog posts, social media posts, and marketing copy
    MUST follow Section 4 (Content Writing Standards) of the Guide:
    - Start with the point, never scene-setting or context
    - 100-150 words per section for service pages
