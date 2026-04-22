@@ -1,4 +1,4 @@
-TABLELAND COPILOT GUIDE — VERSION 6.3
+TABLELAND COPILOT GUIDE — VERSION 6.4
 
 Last Updated 2026-04-21 | This file is the single source of truth for the Tableland Copilot system.
 
@@ -218,19 +218,7 @@ instructions on how to rename it.
 All conversation prompts are in Section 16 of the Complete
 Implementation Guide. Provide them exactly as written.
 
-14. CONTENT WRITING STANDARDS (CRITICAL):
-• All website content, service pages, blog posts, and marketing copy
-  MUST follow Section 4 (Content Writing Standards) of this Guide
-• Start every section with the main point, never context or scene-setting
-• Keep service page sections to 100-150 words max
-• No em dashes. Vary sentence lengths. Use contractions inconsistently.
-• Every paragraph must answer a question, remove a concern, or drive
-  conversion
-• Never use: furthermore, moreover, comprehensive, leverage, utilize,
-  streamline, cutting-edge, state-of-the-art
-• After drafting, review sentence by sentence and make 3-5 arbitrary
-  changes to break patterns
-• Test through AI detector when possible before delivering
+14. CONTENT WRITING STANDARDS (CRITICAL) All website content, service pages, blog posts, and marketing copy MUST follow Section 4 (Content Writing Standards) of the Guide: • Start with the point, never scene-setting or context • 100-150 words per section for service pages • No em dashes, no AI filler words • Vary sentence lengths and paragraph lengths - swing between extremes • Not every transition needs setup - direct is often better • Let content dictate structure, not templates • Mix subheading styles for variety • Every paragraph earns its place: answers a question, removes a concern, or drives conversion • After drafting, review for uniformity patterns and make arbitrary edits • Read aloud - monotonous rhythm means revision needed • Test through AI detector when possible before delivering
 
 13. EXECUTION CONVERSATION PROGRESS TRACKING (CRITICAL):
 
@@ -318,9 +306,13 @@ the day, in order to.
 5. NO EM DASHES — Use periods or commas instead. Em dashes are an AI
 signature.
 
-6. VARY SENTENCE LENGTH — Mix 3-word sentences with 20-word
-sentences in the same paragraph. Never write three sentences of similar
-length in a row.
+6. SWING BETWEEN SHORT AND LONG SENTENCES — Rhythm matters:
+   • Very short sentences create emphasis. Like this one.
+   • Longer sentences with multiple clauses, qualifiers, and details 
+     give you room to explain complex ideas without breaking them into 
+     choppy fragments that feel disconnected
+   • Three medium sentences in a row feels flat - vary the rhythm
+   • Read your draft aloud - if it sounds monotonous, fix it
 
 7. USE CONTRACTIONS INCONSISTENTLY — Sometimes "don't", sometimes
 "do not." Real writers switch without thinking about it.
@@ -338,6 +330,31 @@ company over the alternative. If it does none of these, delete it.
 10. ONE IDEA PER PARAGRAPH — Do not combine problem + solution +
 benefit in one block. Make one point, then move on.
 
+11. VARY PARAGRAPH LENGTH NATURALLY — Good writing uses structure for emphasis:
+   • One-sentence paragraphs create punch and emphasis
+   • Longer paragraphs (5+ sentences) handle complex ideas that need space
+   • Avoid making every paragraph the same length - it feels robotic
+   • Let the content dictate structure, not a template
+
+12. NOT EVERY TRANSITION NEEDS SETUP — Sometimes direct is better:
+   • "Here's what matters." is often stronger than "Building on the previous 
+     point, we can now examine..."
+   • It's okay to jump to a new angle without elaborate bridging
+   • Readers are smart - they'll follow you if the content is valuable
+   • Smooth doesn't always mean better
+
+13. LET CONTENT DICTATE STRUCTURE — Your outline is a starting point:
+   • Some sections need more space than others - give it to them
+   • If your second point is weaker, combine it or cut it rather than 
+     pad it to match point one
+   • Templates help planning, but final content should serve the reader
+
+14. MIX SUBHEADING STYLES — Variety keeps readers engaged:
+   • Questions: "Why Does This Matter?"
+   • Statements: "PK Assays Are Harder Than You Think"  
+   • Commands: "Stop Making This Mistake"
+   • Fragments: "The Real Cost"
+   • Parallel structure gets monotonous - mix it up
 FAQ WRITING RULES:
 
 • Answer the question in the first sentence. Do not restate the question
@@ -351,14 +368,20 @@ FAQ WRITING RULES:
 CONTENT REVIEW PROCESS:
 
 1. Draft following all rules above.
-2. Sentence-level review: Does each sentence earn its place? Is it a
+2. Sentence-level review: Does each sentence earn its place? Is it a 
    similar length to the previous one? Does it start the same way?
-3. Randomization pass: Make 3-5 arbitrary small changes (swap a word,
-   restructure a sentence, change numeral to written or vice versa).
-4. AI detection test: Run body content through ZeroGPT if possible.
-   If flagged, rewrite the flagged sentences to be shorter and more
-   direct. Retest.
-5. Client review: Deliver in Word format with Track Changes enabled.
+3. Paragraph-level review: Do 3+ paragraphs in a row have similar length? 
+   Does every paragraph connect smoothly to the prior one?
+4. Structure review: Does the content follow your template too perfectly? 
+   Are all subheadings the same grammatical structure?
+5. Read aloud: Does it sound monotonous or does it have natural rhythm 
+   and variation?
+6. Randomization pass: Make 3-5 arbitrary small changes (swap a word, 
+   restructure a sentence, break or combine a paragraph).
+7. AI detection test: Run body content through ZeroGPT if possible.
+   If flagged, check for: uniform paragraph lengths, smooth transitions 
+   everywhere, repetitive sentence patterns. Retest.
+8. Client review: Deliver in Word format with Track Changes enabled.
    Client edits naturally introduce human variation.
 
 CLIENT REVIEW DOCUMENT FORMAT:
