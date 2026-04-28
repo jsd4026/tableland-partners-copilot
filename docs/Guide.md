@@ -1,6 +1,6 @@
-TABLELAND COPILOT GUIDE — VERSION 6.5
+TABLELAND COPILOT GUIDE — VERSION 7.0
 
-Last Updated 2026-04-27 | This file is the single source of truth for the Tableland Copilot system.
+Last Updated 2026-04-28 | This file is the single source of truth for the Tableland Copilot system.
 
 TABLELAND COPILOT - COMPLETE IMPLEMENTATION GUIDE
 
@@ -98,6 +98,37 @@ If a member needs a fresh copy:
 https://github.com/jsd4026/tableland-partners-copilot/blob/main/docs/Setup-Mode-Instructions.md
 
 Or email jeff@tablelandpartners.com for the latest version.
+
+ARCHITECTURE NOTE (v3.1+, for future maintainers):
+
+The current architecture uses an "attached-Guide-first" model with multi-tier
+web retrieval as a future-proofing mechanism:
+
+1. Each member has a Guide.md file attached to their Claude Project Files
+2. Project Instructions tell the AI to read the attached Guide via the view tool first
+3. The AI then attempts best-effort web retrieval through three methods:
+   - web_fetch on the standard raw GitHub URL
+   - web_fetch on the alternate /refs/heads/main/ URL format
+   - web_search for the Guide on GitHub
+4. AI compares versions and uses whichever is newest
+
+This means:
+- TODAY: Anthropic's web_fetch caches stale content, so the AI ends up using
+  the attached Guide. This works reliably.
+- WHEN ANTHROPIC IMPROVES THEIR PLATFORM: Whichever method becomes most
+  reliable starts working, and members automatically pick up Guide updates
+  from GitHub on their next conversation. No member action required.
+
+This architecture survives most plausible Anthropic platform changes without
+requiring members to update their Project Instructions or Guide files.
+
+When publishing a new Guide version:
+1. Update version number at the top of Guide.md
+2. Commit/push to GitHub at docs/Guide.md
+3. Existing members keep using their attached Guide until you choose to push
+   them an update (email with download link)
+4. Once Anthropic improves web_fetch caching or web_search indexing of GitHub,
+   members automatically pull the new version on their next conversation
 
 SECTION 3: "I NEED HELP" SUPPORT FEATURE
 
