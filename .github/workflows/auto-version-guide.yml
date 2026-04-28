@@ -1,0 +1,122 @@
+name: Auto-version Guide
+
+# Triggers when Guide.md changes, OR daily at 00:05 UTC, OR manually
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/Guide.md'
+  schedule:
+    # Run daily at 00:05 UTC to ensure today's pointer exists even on quiet days
+    - cron: '5 0 * * *'
+  workflow_dispatch:
+    # Allows manual triggering from GitHub Actions UI
+
+jobs:
+  version-guide:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate hash and pointer files
+        run: |
+          set -e
+          
+          GUIDE_PATH="docs/Guide.md"
+          HASH_DIR="docs/guide-versions"
+          POINTER_DIR="docs/guide-pointers"
+          
+          # Make sure target directories exist
+          mkdir -p "$HASH_DIR"
+          mkdir -p "$POINTER_DIR"
+          
+          # Bail if Guide.md doesn't exist
+          if [ ! -f "$GUIDE_PATH" ]; then
+            echo "::error::Guide.md not found at $GUIDE_PATH"
+            exit 1
+          fi
+          
+          # Compute first 12 chars of SHA-256 of Guide content
+          GUIDE_HASH=$(sha256sum "$GUIDE_PATH" | cut -c1-12)
+          HASH_FILE="$HASH_DIR/Guide-$GUIDE_HASH.md"
+          HASH_URL="https://raw.githubusercontent.com/${{ github.repository }}/main/$HASH_FILE"
+          
+          echo "Guide hash: $GUIDE_HASH"
+          echo "Hash file path: $HASH_FILE"
+          echo "Hash URL: $HASH_URL"
+          
+          # Copy Guide.md to hash-stamped filename if it doesn't already exist
+          if [ ! -f "$HASH_FILE" ]; then
+            cp "$GUIDE_PATH" "$HASH_FILE"
+            echo "Created new hash-stamped file: $HASH_FILE"
+          else
+            echo "Hash-stamped file already exists, skipping"
+          fi
+          
+          # Extract version line from Guide for the pointer JSON (best-effort)
+          GUIDE_VERSION=$(grep -m1 -oP 'VERSION\s+\K[0-9]+\.[0-9]+' "$GUIDE_PATH" || echo "unknown")
+          echo "Guide version: $GUIDE_VERSION"
+          
+          # Generate JSON pointer for today and the next 35 days
+          TODAY_EPOCH=$(date -u +%s)
+          for i in $(seq 0 35); do
+            POINTER_DATE=$(date -u -d "@$((TODAY_EPOCH + i * 86400))" +%Y-%m-%d)
+            POINTER_FILE="$POINTER_DIR/$POINTER_DATE.json"
+            
+            cat > "$POINTER_FILE" <<EOF
+          {
+            "url": "$HASH_URL",
+            "version": "$GUIDE_VERSION",
+            "hash": "$GUIDE_HASH",
+            "updated": "$(date -u +%Y-%m-%d)"
+          }
+          EOF
+            echo "Wrote pointer: $POINTER_FILE"
+          done
+          
+          # Cleanup: delete pointer files older than 7 days
+          # (keeps recent history for debugging, removes stale clutter)
+          find "$POINTER_DIR" -name "*.json" -type f | while read pf; do
+            FNAME=$(basename "$pf" .json)
+            if [[ "$FNAME" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+              FILE_EPOCH=$(date -u -d "$FNAME" +%s 2>/dev/null || echo "0")
+              CUTOFF_EPOCH=$((TODAY_EPOCH - 7 * 86400))
+              if [ "$FILE_EPOCH" -lt "$CUTOFF_EPOCH" ] && [ "$FILE_EPOCH" -gt "0" ]; then
+                rm "$pf"
+                echo "Removed old pointer: $pf"
+              fi
+            fi
+          done
+          
+          # Cleanup: keep only the 10 most recent hash-stamped Guide files
+          # (prevents unbounded growth; older ones are unreachable anyway since pointers expire)
+          ls -t "$HASH_DIR"/Guide-*.md 2>/dev/null | tail -n +11 | while read old_hash; do
+            rm "$old_hash"
+            echo "Removed old hash file: $old_hash"
+          done
+          
+          # Save info for the commit step
+          echo "GUIDE_HASH=$GUIDE_HASH" >> $GITHUB_ENV
+          echo "GUIDE_VERSION=$GUIDE_VERSION" >> $GITHUB_ENV
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Auto-version Guide Action"
+          
+          git add docs/guide-versions/ docs/guide-pointers/
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-version: Guide v${GUIDE_VERSION} (${GUIDE_HASH})"
+            git push
+            echo "Pushed auto-versioned files"
+          fi
