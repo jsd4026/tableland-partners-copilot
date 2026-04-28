@@ -294,11 +294,6 @@ User pastes this to start:
 
 You are Tableland Copilot, an AI-powered business assistant.
 
-GUIDE URL FOR THIS PROJECT:
-https://raw.githubusercontent.com/jsd4026/tableland-partners-copilot/main/docs/Guide.md
-
-Please fetch this URL silently to load the latest Guide before proceeding.
-
 ⚠️ STOP - RENAME THIS CONVERSATION FIRST ⚠️
 
 Before doing ANYTHING else, you must ask the user to rename this
@@ -403,11 +398,6 @@ field:**
 Welcome to Conversation 1: Strategic Planning & Business Foundation!
 
 You are Tableland Copilot, an AI-powered business assistant.
-
-GUIDE URL FOR THIS PROJECT:
-https://raw.githubusercontent.com/jsd4026/tableland-partners-copilot/main/docs/Guide.md
-
-Please fetch this URL silently to load the latest Guide before proceeding.
 
 ⚠️ STOP - RENAME THIS CONVERSATION FIRST ⚠️
 
@@ -538,9 +528,6 @@ Welcome to Conversation 2: Go-to-Market Strategy & Execution!
 
 You are Tableland Copilot, an AI-powered business assistant.
 
-GUIDE URL FOR THIS PROJECT:
-https://raw.githubusercontent.com/jsd4026/tableland-partners-copilot/main/docs/Guide.md
-
 Please fetch this URL silently to load the latest Guide before proceeding.
 
 ⚠️ STOP - RENAME THIS CONVERSATION FIRST ⚠️
@@ -665,11 +652,6 @@ Welcome to Conversation 3: Technical Infrastructure & Automation!
 
 You are Tableland Copilot, an AI-powered business assistant.
 
-GUIDE URL FOR THIS PROJECT:
-https://raw.githubusercontent.com/jsd4026/tableland-partners-copilot/main/docs/Guide.md
-
-Please fetch this URL silently to load the latest Guide before proceeding.
-
 ⚠️ STOP - RENAME THIS CONVERSATION FIRST ⚠️
 
 Before doing ANYTHING else, you must ask the user to rename this
@@ -774,11 +756,6 @@ field:**
 Welcome to Conversation 4: Customer Experience!
 
 You are Tableland Copilot, an AI-powered business assistant.
-
-GUIDE URL FOR THIS PROJECT:
-https://raw.githubusercontent.com/jsd4026/tableland-partners-copilot/main/docs/Guide.md
-
-Please fetch this URL silently to load the latest Guide before proceeding.
 
 ⚠️ STOP - RENAME THIS CONVERSATION FIRST ⚠️
 
@@ -904,11 +881,6 @@ field:**
 Welcome to Conversation 5: Content Creation & Marketing Assets!
 
 You are Tableland Copilot, an AI-powered business assistant.
-
-GUIDE URL FOR THIS PROJECT:
-https://raw.githubusercontent.com/jsd4026/tableland-partners-copilot/main/docs/Guide.md
-
-Please fetch this URL silently to load the latest Guide before proceeding.
 
 ⚠️ STOP - RENAME THIS CONVERSATION FIRST ⚠️
 
@@ -1159,11 +1131,6 @@ Welcome to Conversation 6: Proposals and Agreements!
 
 You are Tableland Copilot, an AI-powered business assistant.
 
-GUIDE URL FOR THIS PROJECT:
-https://raw.githubusercontent.com/jsd4026/tableland-partners-copilot/main/docs/Guide.md
-
-Please fetch this URL silently to load the latest Guide before proceeding.
-
 ⚠️ STOP - RENAME THIS CONVERSATION FIRST ⚠️
 
 Before doing ANYTHING else, you must ask the user to rename this
@@ -1272,11 +1239,6 @@ field:**
 Welcome to Conversation 7: Prospecting & Lead Generation!
 
 You are Tableland Copilot, an AI-powered business assistant.
-
-GUIDE URL FOR THIS PROJECT:
-https://raw.githubusercontent.com/jsd4026/tableland-partners-copilot/main/docs/Guide.md
-
-Please fetch this URL silently to load the latest Guide before proceeding.
 
 ⚠️ STOP - RENAME THIS CONVERSATION FIRST ⚠️
 
@@ -1444,11 +1406,6 @@ Say: "No problem! Generating new leads and adding them to your
 tracker."
 
 You are Tableland Copilot, an AI-powered business assistant.
-
-GUIDE URL FOR THIS PROJECT:
-https://raw.githubusercontent.com/jsd4026/tableland-partners-copilot/main/docs/Guide.md
-
-Please fetch this URL silently to load the latest Guide before proceeding.
 
 ⚠️ STOP - RENAME THIS CONVERSATION FIRST ⚠️
 
@@ -1624,11 +1581,6 @@ field:**
 Welcome to Conversation 8: Receipt Capture & Expense Tracking!
 
 You are Tableland Copilot, an AI-powered business assistant.
-
-GUIDE URL FOR THIS PROJECT:
-https://raw.githubusercontent.com/jsd4026/tableland-partners-copilot/main/docs/Guide.md
-
-Please fetch this URL silently to load the latest Guide before proceeding.
 
 ⚠️ STOP - RENAME THIS CONVERSATION FIRST ⚠️
 
@@ -1847,11 +1799,6 @@ field:**
 Welcome to Conversation 9: Field Support Agent!
 
 You are Tableland Copilot, an AI-powered business assistant.
-
-GUIDE URL FOR THIS PROJECT:
-https://raw.githubusercontent.com/jsd4026/tableland-partners-copilot/main/docs/Guide.md
-
-Please fetch this URL silently to load the latest Guide before proceeding.
 
 ⚠️ STOP - RENAME THIS CONVERSATION FIRST ⚠️
 
