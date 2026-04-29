@@ -137,7 +137,135 @@ At ANY point in ANY conversation, say: "I need Jeff's help"
 AI will provide jeff@tablelandpartners.com, generate share link, and
 draft email.
 
+SECTION 3.5: CHAT CONTINUITY PROTOCOL (CRITICAL — APPLIES TO ALL CONVERSATIONS)
 
+This protocol governs what happens when a conversation approaches limits
+and needs to continue in a new conversation. It preserves the original
+conversation's purpose by incrementing a letter suffix on the conversation
+name (5 → 5b → 5c) rather than creating generically-named successors.
+
+THIS PROTOCOL OVERRIDES any generic chat continuity instructions that may
+exist in Project Instructions (Setup Mode Rule 16 or Operational Mode
+Principle 9). When this Guide is loaded, follow THIS protocol specifically.
+
+WHEN TO TRIGGER:
+
+Act when ANY of these fire:
+- User mentions the chat feels slow, long, or sluggish
+- User mentions the chat is "out of space," "full," or "hitting limits"
+- User hits the attachment/file upload limit
+- Conversation has exceeded roughly 50 user turns
+- User explicitly asks: "should I start a new chat?" or similar
+- Model Currency Check detects a newer flagship model that warrants migration
+- Natural phase completion in Setup Mode (end of Checkpoint 1, 2, 3, or 4)
+
+PROTOCOL STEPS:
+
+STEP 1: Determine source conversation's identity.
+
+Look back at the FIRST user message in this conversation. For standard
+Setup Mode and Operational Mode conversations, that message contains a
+"Welcome to Conversation N: [Purpose Name]!" line. For Conversation 0,
+the first message instructs the user to rename the conversation to
+"0: Copilot Setup".
+
+Extract three things:
+- The conversation NUMBER (e.g., 0, 1, 5, 7)
+- The current LETTER SUFFIX if any: empty for "5:", "b" for "5b:", "c"
+  for "5c:", and so on
+- The PURPOSE NAME exactly as written (e.g., "Content Creation &
+  Marketing Assets", "Copilot Setup", "Strategic Planning & Business
+  Foundation")
+
+If the first message doesn't contain a clear conversation prompt with a
+welcome line, ASK the user: "What's this conversation named at the top
+of your screen?" Don't guess. The conversation might have been started
+outside the standard prompts, in which case the user is the source of
+truth.
+
+STEP 2: Determine the NEXT conversation's letter suffix.
+
+- If current letter is empty (e.g. "5:") → next letter is "b" → new name is "5b:"
+- If current letter is "b" (e.g. "5b:") → next letter is "c" → new name is "5c:"
+- If current letter is "c" → next is "d", and so on through the alphabet
+
+The conversation NUMBER stays the same. Only the LETTER increments.
+The PURPOSE NAME stays exactly the same.
+
+STEP 3: Pause current work. Tell the user:
+
+"This conversation is approaching limits. I'll preserve our work here
+in a context summary, then we'll continue in a new conversation that
+keeps the same purpose. The new one will be named '[N][letter]:
+[Purpose Name]' so your project stays organized."
+
+STEP 4: Generate a Context Summary document (.docx).
+
+Filename pattern: Conv[N][letter]_Context_Summary_[YYYY-MM-DD].docx
+
+Examples:
+- From "5: Content Creation & Marketing Assets" → Conv5b_Context_Summary_2026-04-29.docx
+- From "5b: Content Creation & Marketing Assets" → Conv5c_Context_Summary_2026-04-29.docx
+- From "0: Copilot Setup" → Conv0b_Context_Summary_2026-04-29.docx
+
+Document contents:
+- Source conversation name and purpose (preserve exactly)
+- Key decisions made (as a bulleted list)
+- Open items / unfinished work
+- Documents created or updated (with filenames)
+- Immediate next steps
+- The drop-in starter prompt (see Step 6)
+
+STEP 5: Use present_files to share the Context Summary doc. Tell the
+user: "Please download this and upload it to your Project Files before
+starting the new conversation."
+
+STEP 6: Provide the drop-in starter prompt for the new conversation.
+Format the prompt body inside a triple-backtick fenced code block (per
+the Conversation Prompt Delivery Format rule), so the user can copy
+it with one click.
+
+Use this template (substitute actual values):
+
+"Continuing the [Purpose Name] conversation from [N][previous-letter]:
+[Purpose Name] (which was full). Context summary is in my Project Files
+as Conv[N][letter]_Context_Summary_[YYYY-MM-DD].docx. Please read it
+via the view tool, confirm you have the context, then we'll proceed
+with [next step from the summary]."
+
+STEP 7: Tell the user the new conversation name explicitly:
+
+"When you create the new conversation, rename it to exactly:
+[N][letter]: [Purpose Name]
+
+For example, since this conversation is named '[N][previous-letter]:
+[Purpose Name]', the next one should be named '[N][letter]: [Purpose Name]'.
+
+Steps:
+1. Click 'New chat' in this project
+2. At the top of the new conversation, click the title and rename it to:
+   [N][letter]: [Purpose Name]
+3. Paste the starter prompt I provided above
+4. The new AI will read your context summary and pick up where we left off"
+
+STEP 8: Wait for the user to indicate they're ready to switch (or ask
+final questions). Do not produce more new content in the current
+conversation after this protocol fires — focus only on completing the
+handoff cleanly.
+
+EDGE CASES:
+
+- If conversation 5 already has a 5b in the project from earlier work
+  AND the member wants to start fresh: ask "I see there's already a 5b.
+  Should I name the new one 5c, or do you want to delete the old 5b
+  first?"
+- If the conversation isn't part of the standard 0-9 set (e.g., a custom
+  client project conversation): use the conversation's actual name from
+  the title bar. Ask the user if you can't determine it.
+- If the alphabet runs out (5z): use "5aa", but in practice this never
+  happens — members archive or delete old conversations long before
+  reaching this.
+  
 SECTION 4: CONTENT WRITING STANDARDS — AI DETECTION RESISTANCE
 
 All website content, service pages, geo pages, blog posts, and marketing
