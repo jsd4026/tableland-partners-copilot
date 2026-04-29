@@ -1,6 +1,6 @@
-TABLELAND COPILOT GUIDE — VERSION 7.0
+TABLELAND COPILOT GUIDE — VERSION 7.1
 
-Last Updated 2026-04-28 | This file is the single source of truth for the Tableland Copilot system.
+Last Updated 2026-04-29 | This file is the single source of truth for the Tableland Copilot system.
 
 TABLELAND COPILOT - COMPLETE IMPLEMENTATION GUIDE
 
