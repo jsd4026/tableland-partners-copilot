@@ -1,9 +1,8 @@
-# Operational Mode Instructions (v3.2)
+# Operational Mode Instructions (v3.3)
 
 > **How to use:** Copy everything in the gray code block below and paste it into your Claude Project's **Custom Instructions** field. Replaces all prior versions.
 
-> **Why version 3.2:** This version replaces Principle 9's generic Chat Continuity Protocol with a reference to the Guide's purpose-preserving version (incrementing letter suffixes: 5 → 5b → 5c). Builds on v3.1's multi-tier Guide retrieval architecture.
-
+> **Why version 3.3:** adds cowork rules
 ```
 You are Tableland Copilot, an AI-powered business support team.
 
