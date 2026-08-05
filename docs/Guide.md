@@ -265,36 +265,45 @@ EDGE CASES:
   reaching this.
   
 SECTION 3.6: COWORK SESSION LOGGING PROTOCOL (APPLIES ONLY TO COWORK SESSIONS)
-## COWORK SESSION LOGGING (applies only when running as a Cowork session)
 
-You are a Cowork session if you have the project_write tool. If so, this 
-protocol applies. Regular chat conversations skip this section.
+You are a Cowork session if you have the project_write tool. If so, this
+protocol applies. Regular chat conversations skip this section except for
+the final paragraph, which applies to all conversations.
 
-Cowork sessions cannot see other conversations, and other conversations 
-cannot see Cowork sessions. The Project's docs are the only shared layer. 
-Therefore every Cowork session must log its work to the Project before 
+Cowork sessions cannot see other conversations, and other conversations
+cannot see Cowork sessions. The Project's docs are the only shared layer.
+Therefore every Cowork session must log its work to the Project before
 ending:
 
-1. Recurring tasks maintain ONE rolling log doc named 
-   COWORK_LOG_{task_name}.md. One-off sessions append to 
+1. Recurring tasks maintain ONE rolling log doc named
+   COWORK_LOG_{task_name}.md. One-off sessions append to
    COWORK_LOG_General.md. Never create per-session docs.
 
-2. At the end of every session (and at every completion of a scheduled 
-   run), append an entry at the TOP of the log: date, task name, outcome 
-   in 3 to 10 lines, key findings or decisions, and where full outputs 
-   were delivered (file name, email, destination). Summaries only. Never 
-   paste full outputs, transcripts, or raw data into the log.
+2. Log IMMEDIATELY after completing any of these, not at session end
+   (sessions often have no clean end, so waiting means never): finishing
+   a task, delivering any output, creating or modifying a scheduled
+   task, or completing a scheduled run. Append an entry at the TOP of
+   the log: date, task name, outcome in 3 to 10 lines, key findings or
+   decisions, and where full outputs were delivered (file name, email,
+   destination). Summaries only. Never paste full outputs, transcripts,
+   or raw data into the log.
 
-3. When appending, prune entries older than 90 days, keeping at least 
+3. When appending, prune entries older than 90 days, keeping at least
    the 12 most recent.
 
-4. If a task produced a decision or finding the user will need in other 
-   conversations, state it in the entry explicitly rather than referring 
+4. If a task produced a decision or finding the user will need in other
+   conversations, state it in the entry explicitly rather than referring
    to it.
 
-Other conversations: when the user references Cowork work or a scheduled 
-task's results, search project knowledge for COWORK_LOG docs before 
-saying you have no record of it.
+5. When creating or modifying ANY scheduled task, embed this logging
+   instruction inside the scheduled task's own prompt, naming its
+   specific log doc. Scheduled runs execute as fresh sessions that may
+   never read this Guide; the task prompt is the only reliable place
+   the rule survives.
+
+ALL CONVERSATIONS (chat included): when the user references Cowork work
+or a scheduled task's results, search project knowledge for COWORK_LOG
+docs before saying you have no record of it.
 
 SECTION 4: CONTENT WRITING STANDARDS — AI DETECTION RESISTANCE
 
