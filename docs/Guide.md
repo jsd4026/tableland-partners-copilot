@@ -1,4 +1,4 @@
-TABLELAND COPILOT GUIDE — VERSION 7.5 (2026-08-05): Added Section 3.6 Cowork Session Logging Protocol.
+TABLELAND COPILOT GUIDE — VERSION 7.6 (2026-08-19): Added Section 3.7 Setup Completion Check. Carries Conversation 9 mode branching and the Discovery Summary bridge.
 
 TABLELAND COPILOT - COMPLETE IMPLEMENTATION GUIDE
 
@@ -15,6 +15,12 @@ PART 1: SETUP & OVERVIEW
 2. Project Setup Instructions
 
 3. "I Need Help" Support Feature
+
+3.5 Chat Continuity Protocol
+
+3.6 Cowork Session Logging Protocol
+
+3.7 Setup Completion Check
 
 4. Content Writing Standards — AI Detection Resistance
 
@@ -304,6 +310,56 @@ ending:
 ALL CONVERSATIONS (chat included): when the user references Cowork work
 or a scheduled task's results, search project knowledge for COWORK_LOG
 docs before saying you have no record of it.
+
+SECTION 3.7: SETUP COMPLETION CHECK
+
+Conversations 5-9 are each set up separately, so no single conversation
+knows the overall state of setup unless it asks. Without this protocol a
+member finishes every conversation and is never told they are done.
+
+WHEN TO RUN:
+• At the end of the first substantive exchange in any of Conversations
+5-9, after the user's first real task in that conversation completes
+• Any time the user asks what is left, whether they are done, or whether
+they can switch to Operational Mode
+
+PROTOCOL:
+
+1. Look for Setup_Progress.md in Project Files. If present, read it and
+use it as the baseline. If absent, ask once, in a single message:
+"Quick setup check. Which execution conversations have you set up?
+5 Content Creation, 6 Proposals, 7 Prospecting, 8 Receipt Capture,
+9 Support Agent. Tell me which are done and which you've decided to
+skip."
+
+2. Mark the current conversation BUILT; the user is in it.
+
+3. Classify each of 5-9 as BUILT, SKIPPED (the user explicitly declined
+it), or REMAINING.
+
+4. Write or update Setup_Progress.md with the three lists and today's
+date. Share it with present_files and have the user upload it to Project
+Files so later conversations inherit the state.
+
+5. Branch on the result:
+
+REMAINING is not empty: show the status list, name what is left, and note
+that skipping any of them is fine if they say so. Do not offer the
+Operational Mode transition yet.
+
+REMAINING is empty, meaning every conversation is BUILT or SKIPPED:
+deliver Checkpoint 4 verification, then the Operational Mode switch
+instructions from the end of this Guide.
+
+RULES:
+• SKIPPED counts as resolved. Never hold the transition for a
+conversation the user declined to build.
+• Ask the status question once per conversation, not repeatedly.
+• Never guess at status. If Setup_Progress.md is absent and the user has
+not answered, ask.
+• Conversations 1-4 are foundation phases verified at their own
+checkpoints; this check covers 5-9 only.
+
 
 SECTION 4: CONTENT WRITING STANDARDS — AI DETECTION RESISTANCE
 
@@ -1263,6 +1319,11 @@ Image guidance:
 
 • Complex → Nano Banana (Google Flow) or jeff@tablelandpartners.com
 
+SETUP COMPLETION CHECK: once your first substantive task in this
+conversation is complete, run Section 3.7 of the Guide. Run it again any
+time the user asks what's left or whether they can switch to Operational
+Mode.
+
 Ready to create content?
 
 ---STOP COPYING AT THIS LINE---
@@ -1335,6 +1396,11 @@ File naming: [Year]\_[Month]\_[Day]\_[Client]\_Proposal.docx
 CHECK FILES & COMPLETE WORKFLOW.
 
 Update Proposal_Tracker after each.
+
+SETUP COMPLETION CHECK: once your first substantive task in this
+conversation is complete, run Section 3.7 of the Guide. Run it again any
+time the user asks what's left or whether they can switch to Operational
+Mode.
 
 Ready to create proposals?
 
@@ -1678,6 +1744,11 @@ CHECK FILES & COMPLETE WORKFLOW.
 "Generate today's leads" = 5-10 NEW prospects with verified contact
 info, ready for HubSpot.
 
+SETUP COMPLETION CHECK: once your first substantive task in this
+conversation is complete, run Section 3.7 of the Guide. Run it again any
+time the user asks what's left or whether they can switch to Operational
+Mode.
+
 Ready to find prospects?
 
 ✅ Conversation 7: Prospecting & Lead Generation setup complete!
@@ -1932,6 +2003,11 @@ If file doesn't exist, create it first, then add the receipt.
 CHECK FILES & COMPLETE WORKFLOW (download updated spreadsheet monthly
 for finance).
 
+SETUP COMPLETION CHECK: once your first substantive task in this
+conversation is complete, run Section 3.7 of the Guide. Run it again any
+time the user asks what's left or whether they can switch to Operational
+Mode.
+
 Ready to track expenses?
 
 ---STOP COPYING AT THIS LINE---
@@ -2016,7 +2092,7 @@ If unsure which mode applies, ASK. Never invent a mock customer or a
 hypothetical employee to fill the gap.
 
 BOTH MODES: diagnose before solving, asking what has already been
-checked; reference the actual stack from Workspace Files rather than a
+checked; reference the actual stack from Project Files rather than a
 generic one; any fix that changes a setting, config, or scheduled job
 gets a dependency check, rollback path, and safe-test recommendation
 before implementation; prefer the smallest change that resolves the
@@ -2212,6 +2288,11 @@ CHECK FILES & COMPLETE WORKFLOW.
 
 Perfect for HVAC, plumbing, electrical, IT support, field service
 businesses.
+
+SETUP COMPLETION CHECK: once your first substantive task in this
+conversation is complete, run Section 3.7 of the Guide. Run it again any
+time the user asks what's left or whether they can switch to Operational
+Mode.
 
 Ready to support your field team?
 
